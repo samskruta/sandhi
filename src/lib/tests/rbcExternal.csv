@@ -1,5 +1,4 @@
-,,,,
-S. No.,word,split,Rule,Type
+sno,Word,Split,Rule,Type
 externalsandhi_1,स्वच्छन्दः,स्व+छन्दः,6.1.73.1,consonant
 externalsandhi_2,माच्छिदत्,मा+छिदत्,6.1.74.1,consonant
 externalsandhi_3,लक्ष्मीच्छाया,लक्ष्मी+छाया,6.1.76.1,consonant

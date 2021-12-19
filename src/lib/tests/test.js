@@ -1,9 +1,12 @@
-import applySandhi from '../index';
 import fs from 'fs';
 import { parse } from 'csv/dist/umd/sync';
+const obj = jest.requireActual('../index');
+// jest.disableAutomock()
+//import applySandhi from '../index';
 
-
-const contents = fs.readFileSync('./src/lib/tests/asht.csv','utf8');
+console.log(Object.keys(obj));
+const combine = obj.default.combine;
+const contents = fs.readFileSync('./src/lib/tests/rbcInternal.csv','utf8');
 const rows = parse(contents, {
   columns: true,
   skip_empty_lines: true
@@ -11,12 +14,19 @@ const rows = parse(contents, {
 
 describe('Rule Based Corpus - Internal', () => {
 
-  rows.forEach(row => {
-    const split = row.Split.split('+');
-    test(`it works for ${row.Word}`, () => {
-      const combined = applySandhi(...split);
-      expect(combined).toEqual(row.Word);
-    });
+  // rows.forEach(row => {
+  //   const split = row.Split.split('+');
+  //   test(`it works for ${row.Word}`, () => {
+  //     const combined = applySandhi(...split);
+  //     expect(combined).toEqual(row.Word);
+  //   });
+  // });
+
+  test(`it works for ${rows[0].Word}`, () => {
+    const split = rows[0].Split.split('+');
+    console.log('split row', split);
+    const combined = combine(...split);
+    expect(combined).toEqual(rows[0].Word);
   });
   
 });

@@ -1,3 +1,5 @@
 import applySandhi from "./apply-sandhi";
 
-export default applySandhi;
+export default {
+    combine: applySandhi
+};

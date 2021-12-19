@@ -1,4 +1,4 @@
-S.No,Word,Split,Rule,Type
+sno,Word,Split,Rule,Type
 1.abhishakanatakam-ext.txt.out.dict_1,प्रथमोऽङ्कः,प्रथमः+अङ्कः,1,visarga
 1.abhishakanatakam-ext.txt.out.dict_2,शब्द इव,शब्दः+इव,2,visarga
 1.abhishakanatakam-ext.txt.out.dict_3,इत इतः,इतः+इतः,3,visarga

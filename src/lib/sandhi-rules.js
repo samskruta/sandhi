@@ -2598,4 +2598,18 @@ const rules = [
 "H,P,H P,visarga,kupvo><ka><pO ca (8.3.37),"
 ];
 
-export default rules;
+
+const getRules = () => {
+    const rule = rules.reduce((acc,cur) => {
+        const line = cur.split(',');
+        acc[line[0]+line[1]] = { 
+            combined: line[2],
+            sandhiName: line[3],
+            sandhiRule: line[4],
+            example: line[5]
+        };
+        return acc;
+    },{});
+};
+
+export default getRules();
